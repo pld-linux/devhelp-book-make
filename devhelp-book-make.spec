@@ -1,5 +1,5 @@
 Summary:	DevHelp book: make
-Summary(pl):	Ksi±¿ka do DevHelp'a o make
+Summary(pl):	Ksi±¿ka do DevHelpa o make'u
 Name:		devhelp-book-make
 Version:	1.0
 Release:	1
@@ -14,31 +14,25 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_prefix		/usr/X11R6/share/devhelp/
 
 %description
-DevHelp book about make
+DevHelp book about make.
 
 %description -l pl
-Ksi±¿ka do DevHelp o make
+Ksi±¿ka do DevHelpa o make'u.
 
 %prep
-%setup -q -c make -n make
-
-%build
-mv -f book make
-mv -f book.devhelp make.devhelp
+%setup -q -c -n make
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_prefix}/{books/make,specs}
 
-install -d $RPM_BUILD_ROOT%{_prefix}/books/make
-install -d $RPM_BUILD_ROOT%{_prefix}/specs
-install make.devhelp $RPM_BUILD_ROOT%{_prefix}/specs
-install make/* $RPM_BUILD_ROOT%{_prefix}/books/make
+install book.devhelp $RPM_BUILD_ROOT%{_prefix}/specs/make.devhelp
+install book/* $RPM_BUILD_ROOT%{_prefix}/books/make
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files 
 %defattr(644,root,root,755)
-#%doc *.gz
-%{_prefix}/books
-%{_prefix}/specs
+%{_prefix}/books/*
+%{_prefix}/specs/*
