@@ -6,6 +6,7 @@ Release:	2
 License:	GPL
 Group:		X11/Applications
 Source0:	http://www.devhelp.net/books/books/make.tar.gz
+# Source0-md5:	a9a947a09f58d7034271d21a8f66b673
 URL:		http://www.devhelp.net/
 Requires:	devhelp >= 0.5.0
 BuildArch:	noarch
