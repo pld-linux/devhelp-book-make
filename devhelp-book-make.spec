@@ -1,5 +1,5 @@
 Summary:	DevHelp book: make
-Summary(pl):	Ksi±¿ka do DevHelpa o make'u
+Summary(pl.UTF-8):   KsiÄ…Å¼ka do DevHelpa o make'u
 Name:		devhelp-book-make
 Version:	1.0
 Release:	2
@@ -17,8 +17,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 DevHelp book about make.
 
-%description -l pl
-Ksi±¿ka do DevHelpa o make'u.
+%description -l pl.UTF-8
+KsiÄ…Å¼ka do DevHelpa o make'u.
 
 %prep
 %setup -q -c -n make
