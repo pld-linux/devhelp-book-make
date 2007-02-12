@@ -1,5 +1,5 @@
 Summary:	DevHelp book: make
-Summary(pl.UTF-8):   Książka do DevHelpa o make'u
+Summary(pl.UTF-8):	Książka do DevHelpa o make'u
 Name:		devhelp-book-make
 Version:	1.0
 Release:	2
